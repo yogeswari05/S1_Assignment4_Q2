@@ -25,21 +25,24 @@ int main(){
          scanf("%f", &cNum.c2[i]);
       }
 
+      float dot = 0;
+      for (int i = 0; i < n;i++){
+         dot = dot + cNum.c1[i] * cNum.c2[i];
+      }
+
       if(strcmp(oper, "ADD") == 0){
+         printf("Result: ");
          for (int i = 0; i < n; i++){
             printf("%.2f ", cNum.c1[i] + cNum.c2[i]);
          }
       }
       else if(strcmp(oper, "SUB") == 0){
+         printf("Result: ");
          for (int i = 0; i < n; i++){
             printf("%.2f ", cNum.c1[i] - cNum.c2[i]);
          }
       }
       else if(strcmp(oper, "COSINE") == 0){
-         float dot = 0;
-         for (int i = 0; i < n;i++){
-            dot = dot + cNum.c1[i] * cNum.c2[i];
-         }
 
          float modC1 = 0;
          for (int i = 0; i < n; i++){
@@ -55,8 +58,12 @@ int main(){
 
          float modProduct = 0;
          modProduct = modC1 * modC2;
-
-         printf("%.2f ", dot / modProduct);
+         printf("Result: ");
+         printf("%.2f", dot / modProduct);
+      }
+      else if (strcmp(oper, "DOT") == 0){
+         printf("Result: ");
+         printf("%.2f", dot);
       }
    }
    return 0;
