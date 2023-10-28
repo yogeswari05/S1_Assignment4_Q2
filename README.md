@@ -1,3 +1,6 @@
+# S1_Assignment4_Q1
+//To be updated
+
 # S1_Assignment4_Q2
 In this code, I have used structures.
 The structure complexNumber represents pair of complex numbers.Each complexNUmber has an integer n which stores the number of elements in the each complex number.
