@@ -2,10 +2,16 @@
 In this code, I used structures, enums and arrays.
 I declared accountType as an enumeration type which stores whether an account type is whether savings or current. accountInfo is a structure consisting of accountNumber of integer type, accType of enum type, name , and balance of float type.
 accounts is an array which stores the details of all accounts.nums_accounts is an integer which stores the number of accounts in the accounts array.
+
 createAccount: 
 It creates a new account only if there exist no account with same name and accountType in accounts array.For each new account, it assigns unique accountNumber.
+
 display: 
-This function displays the details i.e, account numer, account type , name of the account holder and balance of all the accounts present in the accounts array.This function doesnot require any arguments.
+This function displays the details i.e, account numer, account type , name of the account holder and balance of all the accounts present in the accounts array in the increaing order of their account numbers. For the purpose of sorting the account numbers I used qsort function.This function doesnot require any arguments.
+
+cmpfunc:
+I used this function in order to sort the account numbers of all the accounts in the accounts array.
+
 transaction: 
 This function takes care of withdrawls and deposits.It does withdrawl iff the account has sufficient money.Then it prints the updated balance after transaction.(0->withdrawl, 1->deposit).
 lowBalanceAccounts: 
