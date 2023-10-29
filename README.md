@@ -2,10 +2,28 @@
 In this code, I used structures, enums and arrays.
 I declared accountType as an enumeration type which stores whether an account type is whether savings or current. accountInfo is a structure consisting of accountNumber of integer type, accType of enum type, name , and balance of float type.
 accounts is an array which stores the details of all accounts.nums_accounts is an integer which stores the number of accounts in the accounts array.
-createAccount: It creates a new account only if there exist no account with same name and accountType in accounts array.For each new account, it assigns unique accountNumber.
-display: This function displays the details i.e, accountNumer, accountType , name of the account holder and balance of all the accounts present in the accounts array.
-transaction: This function takes care of withdrawls and deposits.It does withdrawl iff the account has sufficient money.then it prints the updated balance after transaction.(0->withdrawl, 1->deposit).
-lowBalanceAccounts: It prints the details of all accounts with balance lesser than 100.
+createAccount: 
+It creates a new account only if there exist no account with same name and accountType in accounts array.For each new account, it assigns unique accountNumber.
+display: 
+This function displays the details i.e, account numer, account type , name of the account holder and balance of all the accounts present in the accounts array.This function doesnot require any arguments.
+transaction: 
+This function takes care of withdrawls and deposits.It does withdrawl iff the account has sufficient money.Then it prints the updated balance after transaction.(0->withdrawl, 1->deposit).
+lowBalanceAccounts: 
+It prints the details of all accounts with balance lesser than 100.
+
+user commands, respective outputs:
+CREATE accountType  Name Amount:
+creates a new account with name as Name, account type, balance = Amount
+DELETE AccountType Name:
+deletes an account with AccountType and name as Name, prints Account deleted successfully deleted if it did so, else if it doesnot find thet account, it prints Invalid: User does not exist.
+TRANSACTION AccountNumber Amount Code:
+It implements transaction function.If Code = 0, it means withdrawl, else if Code = 1, it means deposit.
+LOWBALANCE :
+implements lowAccountBalance function.
+DISPLAY :
+implements display function.
+EXIT :
+This command makes the program stop running.The programs asks input from the user until the user enters EXIT command.
 
 # Assignment4_Q2
 In this code, I have used structures.
