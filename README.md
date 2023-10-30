@@ -1,19 +1,28 @@
 # Assignment4_Q1
-In this code, I used structures, enums and arrays.
-I declared accountType as an enumeration type which stores whether an account type is whether savings or current. accountInfo is a structure consisting of accountNumber of integer type, accType of enum type, name , and balance of float type.
-accounts is an array which stores the details of all accounts.nums_accounts is an integer which stores the number of accounts in the accounts array.
+In this code, I used structures, enums and linked lists.
+I declared accountType as an enumeration type which stores whether an account type is whether savings or current. AccountInfo is a structure consisting of accountNumber of integer type, accType of enum type, name , and balance of float type.
+l is a linked list which the AccountInfo struct in  it's each node.
+
+availableAccNum:
+This function is used to give a unique account number to the newly created account, if an account is deleted then another account is created, it assigns the account number of the deleted account to the new account.
 
 createAccount: 
-It creates a new account only if there exist no account with same name and accountType in accounts array.For each new account, it assigns unique accountNumber.
+It creates a new account(node) only if there exist no account with same name and accountType in the linked list.After creating the new node it prints the details of that account.
 
-display: 
-This function displays the details i.e, account numer, account type , name of the account holder and balance of all the accounts present in the accounts array in the increaing order of their account numbers. For the purpose of sorting the account numbers I used qsort function.This function doesnot require any arguments.
+deleteAccount:
+This function deleted the account(node) with entered account number and account type.
+display: After deletion, prints Account successfully deleted.
+If there doesnot exists an account with the given credentials, it prints Invalid.
+
+display:
+This function displays the details i.e, account numer, account type , name of the account holder and balance of all the accounts present in the linkedl list l in the increaing order of their account numbers. For the purpose of sorting the account numbers I used qsort function.This display function doesnot require any arguments.
 
 cmpfunc:
 I used this function in order to sort the account numbers of all the accounts in the accounts array.
 
 transaction: 
 This function takes care of withdrawls and deposits.It does withdrawl iff the account has sufficient money.Then it prints the updated balance after transaction.(0->withdrawl, 1->deposit).
+
 lowBalanceAccounts: 
 It prints the details of all accounts with balance lesser than 100.
 
